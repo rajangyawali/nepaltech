@@ -12,10 +12,14 @@
 
 					<div class="post-slide">
 						<div class="post-img">
-							<a href="{{ news.url }}" class="over-layer"><img src="{{ news.image_url }}" height="300" width="400"alt=""></a>
+						{% if news.image_url %}
+							<a href="{{ news.url }}" class="over-layer"><img src="{{ news.image_url }}" height="300" width="400"alt=" " onerror="this.onerror=null;this.src='{% static 'images/technology.jpg' %}';"></a>
+						{% else %}
+							<a href="{{ news.url }}" class="over-layer"><img src="{% static 'images/technology.jpg' %}" height="300" width="400"alt=" "></a>
+						{% endif %}
 						</div>
 						<div class="post-content">
-							<span class="post-date">{{ news.posted }}</span>
+							<span class="post-date">{{ news.author }} | {{ news.posted}}</span>
 							<h3 class="post-title"><a href="{{ news.url }}">{{ news.title }}</a></h3>
 							<p class="post-description">
 								{{ news.description|truncatechars:120 }}
