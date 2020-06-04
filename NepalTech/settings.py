@@ -24,12 +24,11 @@ STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(l#7(%t-po6@uiis+@nw0sh4ebd1kwpgp61b$#05%vk+h+6v&c'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+ALLOWED_HOSTS = ['nepaltech.herokuapp.com']
 
 
 # Application definition
@@ -41,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'technology',
+    'technology.apps.TechnologyConfig',
     'import_export',
 ]
 

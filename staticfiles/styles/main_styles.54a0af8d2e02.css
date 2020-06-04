@@ -28,24 +28,24 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @font-face {
     font-family: 'HelveticaNeueLTPro';
-    src: url('../fonts/HelveticaNeueLTPro-Bd.eot');
+    src: url("../fonts/HelveticaNeueLTPro-Bd.8a791f465f9f.eot");
     /* IE9 Compat Modes */
-    src: url('../fonts/HelveticaNeueLTPro-Bd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/HelveticaNeueLTPro-Bd.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/HelveticaNeueLTPro-Bd.woff') format('woff'), /* Pretty Modern Browsers */
-    url('../fonts/HelveticaNeueLTPro-Bd.ttf') format('truetype');
+    src: url("../fonts/HelveticaNeueLTPro-Bd.8a791f465f9f.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+    url("../fonts/HelveticaNeueLTPro-Bd.c984e1f1e3f6.woff2") format('woff2'), /* Super Modern Browsers */
+    url("../fonts/HelveticaNeueLTPro-Bd.9f0a351f3175.woff") format('woff'), /* Pretty Modern Browsers */
+    url("../fonts/HelveticaNeueLTPro-Bd.0e356b9a09d6.ttf") format('truetype');
     /* Safari, Android, iOS */
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'HelveticaNeueLTPro';
-    src: url('../fonts/HelveticaNeueLTPro-Md.eot');
+    src: url("../fonts/HelveticaNeueLTPro-Md.a7113c43b22d.eot");
     /* IE9 Compat Modes */
-    src: url('../fonts/HelveticaNeueLTPro-Md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/HelveticaNeueLTPro-Md.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/HelveticaNeueLTPro-Md.woff') format('woff'), /* Pretty Modern Browsers */
-    url('../fonts/HelveticaNeueLTPro-Md.ttf') format('truetype');
+    src: url("../fonts/HelveticaNeueLTPro-Md.a7113c43b22d.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+    url("../fonts/HelveticaNeueLTPro-Md.5a2550f02837.woff2") format('woff2'), /* Super Modern Browsers */
+    url("../fonts/HelveticaNeueLTPro-Md.12fdca6f4f99.woff") format('woff'), /* Pretty Modern Browsers */
+    url("../fonts/HelveticaNeueLTPro-Md.5316194c007f.ttf") format('truetype');
     /* Safari, Android, iOS */
     font-weight: normal;
 }
