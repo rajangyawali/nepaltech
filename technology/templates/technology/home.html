@@ -6,13 +6,22 @@
 	<div class="container>
 		<div class="row">
 			<div class="col-md-12">
+				{% for message in messages %}
+				<div class="alert {{ message.tags }} alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+					{{ message }}
+				</div>
+				{% endfor %}
 				<div id="news-slider" class="owl-carousel">
 
 				{% for news in gadget_news %}
-
 					<div class="post-slide">
 						<div class="post-img">
-							<a href="{{ news.url }}" class="over-layer"><img src="{{ news.image_url }}" height="300" width="400"alt=" " onerror="this.onerror=null;this.src='{% static 'images/technology.jpg' %}';"></a>
+							<a href="{{ news.url }}" class="over-layer">
+								<img src="{{ news.image_url }}" height="300" width="400"alt=" " onerror="this.onerror=null;this.src='{% static 'images/technology.jpg' %}';">
+							</a>
 						</div>
 						<div class="post-content">
 							<span class="post-date">{{ news.author }} | {{ news.posted}}</span>
@@ -20,9 +29,6 @@
 							<p class="post-description">
 								{{ news.description|truncatechars:120 }}
 							</p>
-							<ul class="post-bar">
-								{% comment %} <li><a href="#"></a>,</li> {% endcomment %}
-							</ul>
 						</div>
 					</div>
 
@@ -69,7 +75,7 @@
 									</div>
 									<div class="col-lg-7">
 										<div class="post_content">
-											<div class="post_category cat_technology"><a href="">Technology News</a></div>
+											<div class="post_category cat_1"><a href="">Technology News</a></div>
 											<div class="post_title"><a href="{{ news.url }}">{{news.title}}</a></div>
 											<div class="post_info d-flex flex-row align-items-center justify-content-start">
 												<div class="post_author d-flex flex-row align-items-center justify-content-start">
@@ -88,7 +94,7 @@
 					
 						<!-- Load more button -->
 						<div class="load_more">
-							<div class="load_more_button"><a href="{% url 'technology:recentnews'%}">View More</a></div>
+							<div class="load_more_button"><a href="{% url 'technology:news' 'all' %}">View More</a></div>
 						</div>
 
 						<!-- Telecom News -->
@@ -112,7 +118,7 @@
 										</div>
 										<div class="col-lg-7">
 											<div class="post_content">
-												<div class="post_category cat_technology"><a href="">Telecom News</a></div>
+												<div class="post_category cat_1"><a href="">Telecom News</a></div>
 												<div class="post_title"><a href="{{ news.url }}">{{ news.title }}</a></div>
 												<div class="post_info d-flex flex-row align-items-center justify-content-start">
 													<div class="post_author d-flex flex-row align-items-center justify-content-start">
@@ -138,7 +144,7 @@
 						</div>
 						<!-- Load more button -->
 						<div class="load_more">
-							<div class="load_more_button"><a href="{% url 'technology:telconews'%}">View More</a></div>
+							<div class="load_more_button"><a href="{% url 'technology:news' 'telco' %}">View More</a></div>
 						</div>
 
 						<!-- Gadget News -->
@@ -162,7 +168,7 @@
 										</div>
 										<div class="col-lg-7">
 											<div class="post_content">
-												<div class="post_category cat_technology"><a href="">Gadgets News</a></div>
+												<div class="post_category cat_1"><a href="">Gadgets News</a></div>
 												<div class="post_title"><a href="{{ new.url}}">{{ news.title }}</a></div>
 												<div class="post_info d-flex flex-row align-items-center justify-content-start">
 													<div class="post_author d-flex flex-row align-items-center justify-content-start">
@@ -187,7 +193,7 @@
 						</div>
 						<!-- Load more button -->
 						<div class="load_more">
-							<div class="load_more_button"><a href="{% url 'technology:gadgetnews'%}">View More</a></div>
+							<div class="load_more_button"><a href="{% url 'technology:news' 'gadget' %}">View More</a></div>
 						</div>
 
 						<!-- Global News -->
@@ -211,7 +217,7 @@
 										</div>
 										<div class="col-lg-7">
 											<div class="post_content">
-												<div class="post_category cat_technology"><a href="category.html">Global News</a></div>
+												<div class="post_category cat_1"><a href="category.html">Global News</a></div>
 												<div class="post_title"><a href="{{ new.url}}">{{ news.title }}</a></div>
 												<div class="post_info d-flex flex-row align-items-center justify-content-start">
 													<div class="post_author d-flex flex-row align-items-center justify-content-start">
@@ -236,7 +242,7 @@
 						</div>
 						<!-- Load more button -->
 						<div class="load_more">
-							<div class="load_more_button"><a href="{% url 'technology:globalnews'%}">View More</a></div>
+							<div class="load_more_button"><a href="{% url 'technology:news' 'global' %}">View More</a></div>
 						</div>
 
 					</div>

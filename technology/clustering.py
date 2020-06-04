@@ -3,7 +3,7 @@ from string import punctuation
 import nltk
 
 
-from .models import TechNews, TelcoNews, GadgetNews, GlobalNews
+from .models import ScrappedNews
 
 def minhash(input_question, compare_question):
     score = 0.0
@@ -16,15 +16,7 @@ def minhash(input_question, compare_question):
 
     return score
 
-def cluster(newsclass):
-    if newsclass == 'technews':
-        news = TechNews.objects.all()
-    if newsclass == 'telconews':
-        news = TelcoNews.objects.all()
-    if newsclass == 'gadgetnews':
-        news = GadgetNews.objects.all()
-    if newsclass == 'globalnews':
-        news = GlobalNews.objects.all()
+def cluster(news):
     headlines = []
     headlines_cleaned = []
 

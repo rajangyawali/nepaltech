@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+	<!-- Contact -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				
+				<!-- Contact Content -->
+				<div class="col-lg-4 contact_col">
+					<div class="contact_content">
+						<div class="contact_title">Get in Touch</div>
+						<div class="contact_text">
+							<p>We provide recent updates on Technology, Gadgets and Telecommunication News. <br> Most of the news are from third-party sources.</p>
+						</div>
+						<div class="contact_social">
+							<ul class="contact_social_list d-flex flex-row align-items-center justify-content-start">
+								<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.nepaltech.herokuapp.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="https://twitter.com/home?status=Blog%20App%20by%20Nepal%20Technepaltech.herokuapp.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="http://www.linkedin.com/shareArticle?url=http://www.nepaltech.herokuapp.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="contact_info">
+							<ul>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="contact_info_box d-flex flex-column align-items-center justify-content-center">
+										<div class="contact_info_icon"><img src="{% static 'images/icon_1.svg' %}" alt=""></div>
+									</div>
+									<div class="contact_info_content">Babarmahal, Kathmandu, Nepal</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="contact_info_box d-flex flex-column align-items-center justify-content-center">
+										<div class="contact_info_icon"><img src="{% static 'images/icon_2.svg' %}" alt=""></div>
+									</div>
+									<div class="contact_info_content">+977 1 555 5545 </div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="contact_info_box d-flex flex-column align-items-center justify-content-center">
+										<div class="contact_info_icon"><img src="{% static 'images/icon_3.svg' %}" alt=""></div>
+									</div>
+									<div class="contact_info_content">nepaltech@gmail.com</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Form -->
+				<div class="col-lg-8 contact_col">
+					<div class="contact_form_container">
+						<div class="contact_title">Send us a message</div>
+						<form method="POST" id="contact_form" class="contact_form">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="contact_input" name="name" placeholder="Name" required="required">
+								</div>
+								<div class="col-md-6">
+									<input type="email" class="contact_input" name="email" placeholder="E-mail" required="required">
+								</div>
+							</div>
+							<input type="text" class="contact_input" name="subject" placeholder="Subject" required="required">
+							<textarea class="contact_input contact_textarea" name="message" placeholder="Message" required="required"></textarea>
+							<button class="contact_button trans_200">submit</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Google Map -->
+	
+	{% comment %} <div class="google_map_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="contact_map">
+						<!-- Google Map -->
+						<div class="map">
+							<div id="google_map" class="google_map">
+								<div class="map_container">
+									<div id="map"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		 {% endcomment %}
+
+	<!-- Footer -->
+
+<!-- Content Container -->
+
+{% endblock %}
+
+
+
+
+
+
