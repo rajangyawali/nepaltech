@@ -157,7 +157,7 @@ def contact(request):
 
 def getNews(request):
     crawl_news()
-    return render(request, 'home/getnews.html')
+    return render(request, 'technology/getnews.html', context={})
 def error_404(request, exception):
     return render(request, 'error_404.html', status='404')
 
