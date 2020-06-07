@@ -10,6 +10,7 @@ import pandas as pd
 from . models import ScrappedNews, NewsPost, Subscriber, Contact
 from . clustering import cluster
 from .forms import SubscriberForm, ContactForm
+from crawler.newscrawler import crawl_news
 
 TAGS = {'NTC': 1, 'LTE': 2, 'Ncell': 3, 'SmartCell': 1, 'NTA': 2, '5G': 3, 'Huawei': 4,'Samsung': 2,
         'Xiaomi': 1, 'Oppo': 4, 'Vivo': 3, 'Apples':1, 'Laptops': 4, 'Poco': 3}
@@ -154,6 +155,9 @@ def contact(request):
             return render(request, "home/contact.html", context={"form":form})
     return render(request, 'technology/contact.html', context={"form":form})
 
+def getNews(request):
+    crawl_news()
+    return render(request, 'home/getnews.html')
 def error_404(request, exception):
     return render(request, 'error_404.html', status='404')
 

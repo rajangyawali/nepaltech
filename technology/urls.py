@@ -8,4 +8,5 @@ urlpatterns = [
     path('news/<str:category>/', views.allNews, name='news'),
     path('search/', views.searchNews, name = 'searchnews'),
     path('contact/', views.contact, name='contact'),
+    path('get-news/', views.getNews, name='get-news')
 ]
